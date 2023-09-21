@@ -1,0 +1,24 @@
+<svg width="200" height="200" xmlns="http://www.w3.org/2000/svg" version="1.1">
+    <circle cx="100" cy="100" r="90" fill="red"/>
+    <path id="min-path" d="
+        M 95 100
+        L 95 15
+        A 5 5 0 0 1 105 15
+        L 105 100
+        A 5 5 0 0 1 95 100
+        Z
+    " stroke-width="1" fill="white" stroke="black"/>
+    <path id="min-line" d="M 100 100 l 0 -85" fill="transperent"/>
+    <text fill="black">
+        <textpath xmlns:xlink="http://www.w3.org/1999/xlink" href="#min-line">
+            minutes
+        </textpath>
+    </text>
+    <style>
+        <![CDATA[
+        text{
+            dominant-baseline: hanging;
+            font: 5px Veranda,  Helvetica, Arial, sans-serif;
+        }]]>
+    </style>
+</svg>

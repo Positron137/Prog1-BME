@@ -1,0 +1,3 @@
+D:\Other\VisualStudio\2022\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe -E rm -f CMakeFiles\NHF.dir/objects.a
+C:\MinGW\bin\ar.exe qc CMakeFiles\NHF.dir/objects.a @CMakeFiles\NHF.dir\objects1.rsp
+C:\MinGW\bin\gcc.exe -g -Wl,--whole-archive CMakeFiles\NHF.dir/objects.a -Wl,--no-whole-archive -o NHF.exe -Wl,--out-implib,libNHF.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\NHF.dir\linkLibs.rsp

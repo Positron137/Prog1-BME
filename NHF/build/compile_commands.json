@@ -1,0 +1,8 @@
+[
+{
+  "directory": "D:/Documents/Prog1-BME/NHF/build",
+  "command": "C:\\MinGW\\bin\\gcc.exe   -g -o CMakeFiles\\NHF.dir\\main.c.obj -c D:\\Documents\\Prog1-BME\\NHF\\main.c",
+  "file": "D:/Documents/Prog1-BME/NHF/main.c",
+  "output": "CMakeFiles/NHF.dir/main.c.obj"
+}
+]

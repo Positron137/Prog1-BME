@@ -1,0 +1,17 @@
+#include <stdio.h>
+ 
+int main(void) {
+    double szamok[10] = { 2.5, -69, 5.4, -8, -7.7, 6, 2.9, -10, -3, 9.8 };
+ 
+    /* Az eredeti tömb kiírása */
+    printf("Összesen %d szám van.\n", 10);
+    for (int i = 0; i < 10; ++i)
+        printf("[%d]=%g ", i, szamok[i]);
+    printf("\n\n");
+ 
+    /* Negatívak indexeinek kigyűjtése */
+ 
+    /* Negatívak kiírása */
+ 
+    return 0;
+}
