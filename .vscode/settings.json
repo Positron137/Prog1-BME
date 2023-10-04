@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "*.v": "verilog",
+        "feladat_2": "c"
+    },
+    "cmake.configureOnOpen": false
+}

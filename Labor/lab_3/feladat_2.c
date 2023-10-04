@@ -10,8 +10,20 @@ int main(void) {
     printf("\n\n");
  
     /* Negatívak indexeinek kigyűjtése */
- 
+    int neg_i[10];
+    int count = 0;
+    for (int i = 0; i < 10; ++i)
+    {
+        if (szamok[i] < 0)
+        {
+            neg_i[count] = i;
+            count++;
+        }
+    }
     /* Negatívak kiírása */
- 
+    printf("Ebbol %d szam negativ.\n", count);
+    for (int i = 0; i < count; ++i)
+        printf("[%d]=%g ", neg_i[i], szamok[neg_i[i]]);
+    printf("\n");
     return 0;
 }
