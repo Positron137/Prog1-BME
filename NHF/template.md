@@ -1,4 +1,6 @@
-# Project STF
+# Project S-t-F
+# Main point
+open a c source file provided by the user, and convert it to a flowchart
 ## GUI
 ### Menu
 - Open file (both .h and .c at the same time)
@@ -8,7 +10,7 @@
 - top menu
 ### Viewport
 - visualize 
-  - colorful (themes, simple filetype)
+  - colorful (themes, INI filetype)
   - functions: squares
     - use doxygen comments for description
   - structs: to the left side
@@ -20,6 +22,19 @@
   - for, while loops loop back on themselves
   - objects movable by mouse
   - viewport movable my mouse (zoom, pan)
+### Theme
+ - colors
+ - fonts
+ - background
+ - for:
+   - functions
+   - structs
+   - variables
+   - ifs
+   - loops
+ - for:
+   - main viewport:
+     - only background
 ##  CMD
 ### Options
 - -o output fileWithoutExt
@@ -29,3 +44,4 @@
 - -png -t png
 - -h help
 - none open file in gui
+- no file, open gui
