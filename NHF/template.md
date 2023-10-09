@@ -1,0 +1,31 @@
+# Project STF
+## GUI
+### Menu
+- Open file (both .h and .c at the same time)
+- save img
+- ? save md ?
+- theme
+- top menu
+### Viewport
+- visualize 
+  - colorful (themes, simple filetype)
+  - functions: squares
+    - use doxygen comments for description
+  - structs: to the left side
+  - functions point to variables they make and variable point to functions that use them
+  - no threading
+  - references pont to function and it points back to them
+  - if makes branch
+  - switch makes multiple branches
+  - for, while loops loop back on themselves
+  - objects movable by mouse
+  - viewport movable my mouse (zoom, pan)
+##  CMD
+### Options
+- -o output fileWithoutExt
+- -t output [type]
+- ? -md -t md ?
+- -jpg -t jpg
+- -png -t png
+- -h help
+- none open file in gui
