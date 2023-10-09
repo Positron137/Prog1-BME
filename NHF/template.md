@@ -13,6 +13,8 @@ open a c source file provided by the user, and convert it to a flowchart
   - colorful (themes, INI filetype)
   - functions: squares
     - use doxygen comments for description
+    - only for functions
+    - only javadoc style
   - structs: to the left side
   - functions point to variables they make and variable point to functions that use them
   - no threading
