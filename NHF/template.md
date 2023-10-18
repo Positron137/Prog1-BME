@@ -26,7 +26,6 @@ open a c source file provided by the user, and convert it to a flowchart
   - viewport movable my mouse (zoom, pan)
 ### Theme
  - colors
- - fonts
  - background
  - for:
    - functions
@@ -40,10 +39,8 @@ open a c source file provided by the user, and convert it to a flowchart
 ##  CMD
 ### Options
 - -o output fileWithoutExt
-- -t output [type]
-- ? -md -t md ?
-- -jpg -t jpg
-- -png -t png
+- -t output [type] (jpg, png ,?md?)
 - -h help
+- - themefile.ini
 - none open file in gui
 - no file, open gui

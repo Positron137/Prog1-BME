@@ -3,7 +3,13 @@ project(NHF C)
 
 set(CMAKE_C_STANDARD 11)
 
-add_executable(NHF main.c)
+add_executable(NHF main.c
+        #consts.h
+        console.h
+        console.c
+        ini_reader.c
+        ini_reader.h
+        main.h)
 INCLUDE(FindPkgConfig)
 
 PKG_SEARCH_MODULE(SDL2 REQUIRED sdl2)

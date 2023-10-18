@@ -56,6 +56,20 @@ build CMakeFiles/NHF.dir/main.c.obj: C_COMPILER__NHF_unscanned_Debug D$:/Documen
   OBJECT_DIR = CMakeFiles\NHF.dir
   OBJECT_FILE_DIR = CMakeFiles\NHF.dir
 
+build CMakeFiles/NHF.dir/console.c.obj: C_COMPILER__NHF_unscanned_Debug D$:/Documents/Prog1-BME/NHF/console.c || cmake_object_order_depends_target_NHF
+  DEP_FILE = CMakeFiles\NHF.dir\console.c.obj.d
+  FLAGS = -g -std=gnu11 -fdiagnostics-color=always
+  INCLUDES = -IC:/msys64/mingw64/bin/../include/SDL2 -IC:/msys64/mingw64/bin/../include/libpng16 -IC:/msys64/mingw64/bin/../include/harfbuzz -IC:/msys64/mingw64/bin/../include/freetype2 -IC:/msys64/mingw64/bin/../include/glib-2.0 -IC:/msys64/mingw64/bin/../lib/glib-2.0/include -IC:/msys64/mingw64/bin/../include/webp
+  OBJECT_DIR = CMakeFiles\NHF.dir
+  OBJECT_FILE_DIR = CMakeFiles\NHF.dir
+
+build CMakeFiles/NHF.dir/ini_reader.c.obj: C_COMPILER__NHF_unscanned_Debug D$:/Documents/Prog1-BME/NHF/ini_reader.c || cmake_object_order_depends_target_NHF
+  DEP_FILE = CMakeFiles\NHF.dir\ini_reader.c.obj.d
+  FLAGS = -g -std=gnu11 -fdiagnostics-color=always
+  INCLUDES = -IC:/msys64/mingw64/bin/../include/SDL2 -IC:/msys64/mingw64/bin/../include/libpng16 -IC:/msys64/mingw64/bin/../include/harfbuzz -IC:/msys64/mingw64/bin/../include/freetype2 -IC:/msys64/mingw64/bin/../include/glib-2.0 -IC:/msys64/mingw64/bin/../lib/glib-2.0/include -IC:/msys64/mingw64/bin/../include/webp
+  OBJECT_DIR = CMakeFiles\NHF.dir
+  OBJECT_FILE_DIR = CMakeFiles\NHF.dir
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target NHF
@@ -64,7 +78,7 @@ build CMakeFiles/NHF.dir/main.c.obj: C_COMPILER__NHF_unscanned_Debug D$:/Documen
 #############################################
 # Link the executable NHF.exe
 
-build NHF.exe: C_EXECUTABLE_LINKER__NHF_Debug CMakeFiles/NHF.dir/main.c.obj
+build NHF.exe: C_EXECUTABLE_LINKER__NHF_Debug CMakeFiles/NHF.dir/main.c.obj CMakeFiles/NHF.dir/console.c.obj CMakeFiles/NHF.dir/ini_reader.c.obj
   FLAGS = -g
   LINK_LIBRARIES = -lmingw32  -lSDL2main  -lSDL2  -lSDL2_gfx  -lmingw32  -lSDL2main  -lSDL2  -lSDL2_ttf  -lmingw32  -lSDL2main  -lSDL2  -lSDL2_image  -lmingw32  -lSDL2main  -lSDL2  -lSDL2_gfx  -lSDL2_ttf  -lSDL2_image  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\NHF.dir
