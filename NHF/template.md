@@ -3,11 +3,21 @@
 open a c source file provided by the user, and convert it to a flowchart
 ## GUI
 ### Menu
-- Open file (both .h and .c at the same time)
-- save img
-- ? save md ?
-- theme
 - top menu
+  - file
+    - Open file (both .h and .c at the same time)
+    - save jpg
+    - save png
+    - ? save md ?
+    - keybinds
+  - view
+    - theme
+      - load
+        - custom
+    - reset zoom
+    - zoom in
+    - zoom out
+  - exit
 ### Viewport
 - visualize 
   - colorful (themes, INI filetype)

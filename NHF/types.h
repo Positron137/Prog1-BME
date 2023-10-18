@@ -16,7 +16,7 @@ typedef enum {
     //file_type_md, /// <markdown file
 } file_type_e;
 
-extern file_type_e DEFAULT_FILE_TYPE;
+#define DEFAULT_FILE_TYPE file_type_png
 
 /**
  * flowchart drawing types
