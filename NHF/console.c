@@ -10,16 +10,16 @@ int init_console(int argc, char** argv, char* theme_file, char* output_file, cha
     while ((c = getopt(argc,argv,":o:t:h")) != -1) {
         switch (c) {
             case 't':
-                theme_file = optarg;
+                strcpy(theme_file, optarg);
                 break;
             case 'h':
                 printf("Usage: console -t <theme_file> -o <output_file> -i <input_file>\n");
                 return  -1;
             case 'o':
-                output_file = optarg;
+                strcpy(output_file, optarg);
                 break;
             case ':':
-                in_file = optarg;
+                strcpy(in_file, optarg);
                 break;
             case '?':
                 if (optopt == 'o') {

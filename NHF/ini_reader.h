@@ -5,11 +5,8 @@
 #ifndef NHF_INI_READER_H
 #define NHF_INI_READER_H
 
-/**
- * ini reader types
- */
-//////////////////////////////////////////////////////////
 #include <SDL_pixels.h>
+#include "types.h"
 
 /**
  * enum for ini file context
@@ -52,36 +49,21 @@ typedef struct {
 } theme_t;
 
 /**
- * hash-map like struct for mapping strings to enums
- */
-typedef struct {
-    const char *name;
-    union {
-        context_e context;
-        sub_context_e sub_context;
-    };
-} mapping_t;
-
-
-/**
- * mappings for context
- */
-extern mapping_t mappings_c[];
-/**
- * mappings for subcontext
- */
-extern mapping_t mappings_sc[];
-
-/**
  * reads the theme ini file for custom themes
  * @param filename name of the ini file (including the .ini)
  * @param theme pointer to the theme variable
  * @return 0 if ok, 1 if error
  */
-int read_ini(char *filename, theme_t *theme);
+int read_ini(const char *filename, theme_t *theme);
 /**
  * turns a string to lowercase
  * @param str string
  */
 void stoLower(char *str);
+/**
+ * Sets the rgba of an SDL_Colour
+ * @param hex hexadecimal string beginning with an #
+ * @param colour pointer to the SDL_Colour
+ */
+void set_rgba(char *hex, SDL_Colour *colour);
 #endif //NHF_INI_READER_H

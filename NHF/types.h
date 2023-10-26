@@ -4,7 +4,6 @@
 
 #ifndef NHF_TYPES_H
 #define NHF_TYPES_H
-#endif//NHF_TYPES_H
 /**
  * Input file enum
  */
@@ -16,17 +15,14 @@ typedef enum {
     //file_type_md, /// <markdown file
 } file_type_e;
 
+/**
+ * hash-map like struct for mapping strings to anything (not very safe)
+ */
+typedef struct {
+    const char *key;
+    const void *value;
+} mapping_t;
+
 #define DEFAULT_FILE_TYPE file_type_png
 
-/**
- * flowchart drawing types
- */
-///////////////////////////////////////////////////
-#include <SDL_rect.h>
-
-/*typedef struct {
-    context_e type;
-    SDL_Rect rect;
-} node_t;*/
-
-
+#endif//NHF_TYPES_H

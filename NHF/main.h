@@ -14,6 +14,8 @@
 #include <windows.h>
 #include <SDL_syswm.h>
 #include <shobjidl.h>
+#include "source_reader.h"
+#include "debugmalloc.h"
 
 int main(int argc, char** argv);
 
@@ -38,91 +40,26 @@ HWND GetHwnd(SDL_Window *window);
  */
 void ActivateMenu(HWND windowRef);
 //code from https://stackoverflow.com/questions/51250046/sdl2-win32-api-menubar-click-event-not-working
+char* file_open_dialog(HWND windowRef);
+char* file_save_dialog(HWND windowRef);
 
-
-theme_t default_theme = {
+static theme_t default_theme = {
         .main_ = {
-                .background = {
-                        .r = 255,
-                        .g = 255,
-                        .b = 255,
-                        .a = 255
-                },
-                .text = {
-                        .r = 0,
-                        .g = 0,
-                        .b = 0,
-                        .a = 255
-                }
-        },
+            .background = {.r = 255,.g = 255,.b = 255,.a = 255},
+            .text = {.r = 0,.g = 0,.b = 0,.a = 255}},
         .functions = {
-                .background = {
-                        .r = 255,
-                        .g = 255,
-                        .b = 255,
-                        .a = 255
-                },
-                .text = {
-                        .r = 0,
-                        .g = 0,
-                        .b = 0,
-                        .a = 255
-                }
-        },
+            .background = {.r = 255,.g = 255,.b = 255,.a = 255},
+            .text = {.r = 0,.g = 0,.b = 0,.a = 255}},
         .structs = {
-                .background = {
-                        .r = 255,
-                        .g = 255,
-                        .b = 255,
-                        .a = 255
-                },
-                .text = {
-                        .r = 0,
-                        .g = 0,
-                        .b = 0,
-                        .a = 255
-                }
-        },
+            .background = {.r = 255,.g = 255,.b = 255,.a = 255},
+            .text = {.r = 0,.g = 0,.b = 0,.a = 255}},
         .variables = {
-                .background = {
-                        .r = 255,
-                        .g = 255,
-                        .b = 255,
-                        .a = 255
-                },
-                .text = {
-                        .r = 0,
-                        .g = 0,
-                        .b = 0,
-                        .a = 255
-                }
-        },
+            .background = {.r = 255,.g = 255,.b = 255,.a = 255},
+            .text = {.r = 0,.g = 0,.b = 0,.a = 255}},
         .conditionals = {
-                .background = {
-                        .r = 255,
-                        .g = 255,
-                        .b = 255,
-                        .a = 255
-                },
-                .text = {
-                        .r = 0,
-                        .g = 0,
-                        .b = 0,
-                        .a = 255
-                }
-        },
+            .background = {.r = 255,.g = 255,.b = 255,.a = 255},
+            .text = {.r = 0,.g = 0,.b = 0,.a = 255}},
         .loops = {
-                .background = {
-                        .r = 255,
-                        .g = 255,
-                        .b = 255,
-                        .a = 255
-                },
-                .text = {
-                        .r = 0,
-                        .g = 0,
-                        .b = 0,
-                        .a = 255
-                }
-        }
+            .background = {.r = 255,.g = 255,.b = 255,.a = 255},
+            .text = {.r = 0,.g = 0,.b = 0,.a = 255}}
 };

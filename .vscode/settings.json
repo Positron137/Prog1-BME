@@ -3,7 +3,8 @@
         "*.v": "verilog",
         ".coveragerc": "plaintext",
         "feladat_2": "c",
-        "math.h": "c"
+        "math.h": "c",
+        "stdio.h": "c"
     },
     "cmake.configureOnOpen": false
 }
