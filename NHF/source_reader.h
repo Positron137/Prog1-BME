@@ -39,9 +39,12 @@ typedef struct node{
         conditional_type_t conditional;
         loop_type_t loop;
     };
-    int list_size;
     struct node **nextList;
 } node_t;
 
+#define DEFAULT_NAME "default_name"
+#define DEFAULT_TYPE -1
+
 node_t *read_source(char *filename);
+node_t* default_node();
 #endif //NHF_SOURCE_READER_H

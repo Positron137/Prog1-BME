@@ -10,12 +10,13 @@ node_t *read_source(char *filename){
         fprintf(stderr, "Unable to open file %s\n", filename);
         return NULL;
     }
-    node_t *first_node = (node_t *) malloc(sizeof(node_t));
+    node_t *first_node = default_node();
     node_t *current_node = first_node;
-    current_node->type = -1;
     char *buffer = malloc(1000)
     int skip = 0;
     int c = 0;
+    int c_brackets[2] = {0,0};
+    int n_brackets[2] = {0,0};
     for (int i = 0; c != EOF; i = (i == 999) ? 0 : i + 1) {
         c = getc(fp);
         if (skip && c != '\n') continue;
@@ -29,11 +30,31 @@ node_t *read_source(char *filename){
             continue;
         } // reading and comments
         fprintf(stderr,"%s", buffer);
+        switch (c)
+        {
+            case '{':
+                c_brackets[1] = c_brackets[0]
+                c_brackets[0]++;
+                break;
+            case '}':
+                c_brackets[1] = c_brackets[0]
+                c_brackets[0]--;
+                break;
+            case '(':
+                n_brackets[1] = n_brackets[1];
+                n_brackets[0]++;
+                break;
+            case ')':
+                n_brackets[1] = n_brackets[1];
+                n_brackets[0]--;
+                break;
+        }
         if (strstr(buffer, "struct") !=-1)
         {
+            current_node->type = structs;
             if (strstr(buffer, "typedef") != -1)
             {
-                if (c != ';') continue;
+                
                 sscanf(buffer, "%[^;]s", current_node->name)
             }
         }
@@ -59,4 +80,15 @@ node_t *read_source(char *filename){
     }
     fclose(fp);
     return first_node;
+}
+
+
+node_t* default_node()
+{
+    node_t* node = (node *)malloc(sizeof(node_t));
+    node->name = DEFAULT_NAME;
+    node->type DEFAULT_TYPE;
+    node->nextList = (node_t **) malloc(sizeof(node_t));
+    node->nextList[0] = NULL;
+    return node;
 }
