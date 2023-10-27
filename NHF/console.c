@@ -22,9 +22,7 @@ int init_console(int argc, char** argv, char* theme_file, char* output_file, cha
                 strcpy(in_file, optarg);
                 break;
             case '?':
-                if (optopt == 'o') {
-                    fprintf(stderr, "Option -%c requires an argument.\n", optopt);
-                } else if (optopt == 't') {
+                if (optopt == 'o' || optopt == 't') {
                     fprintf(stderr, "Option -%c requires an argument.\n", optopt);
                 } else {
                     fprintf(stderr, "Unknown option `-%c'.\n", optopt);

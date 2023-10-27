@@ -13,14 +13,12 @@ node_t *read_source(char *filename){
     node_t *first_node = (node_t *) malloc(sizeof(node_t));
     node_t *current_node = first_node;
     current_node->type = -1;
-    char buffer[1000];
+    char *buffer = malloc(1000)
     int skip = 0;
     int c = 0;
     for (int i = 0; c != EOF; i = (i == 999) ? 0 : i + 1) {
         c = getc(fp);
-        if (skip == 1 && c != '\n') {
-            continue;
-        }
+        if (skip && c != '\n') continue;
         skip = 0;
         buffer[i] = (char) c;
         buffer[i + 1] = '\0';
@@ -29,8 +27,17 @@ node_t *read_source(char *filename){
             skip = 1;
             if (i > 1 && (buffer[i-1] == '/' && buffer[i] == '/')) i--;
             continue;
-        }
+        } // reading and comments
         fprintf(stderr,"%s", buffer);
+        if (strstr(buffer, "struct") !=-1)
+        {
+            if (strstr(buffer, "typedef") != -1)
+            {
+                if (c != ';') continue;
+                sscanf(buffer, "%[^;]s", current_node->name)
+            }
+        }
+        else if ()
         /*switch (current_node->type) {
             case structs:
                 if (current_node->name[0] == '\0') {
